@@ -9,5 +9,4 @@ public class OneTouchTestAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OneTouchTestAppApplication.class, args);
 	}
-
 }
