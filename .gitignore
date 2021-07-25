@@ -25,3 +25,13 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+/src/main/resources/publicKey.pem
+/src/main/resources/privateKey.pem
+/src/main/resources/privateKeyPcks8.pem
+/src/main/resources/privateKeyOriginal.pem
+/src/main/resources/publicKeyOriginal.pem
+/src/main/resources/privateKeyTest.pem
+/src/main/resources/privateKeyTestPcks8.pem
+/src/test/java/resources/privateKeyTest.pem
+/src/test/java/resources/privateKeyTestPcks8.pem
+/src/test/java/resources/privateKeyTestPcks8.pk8
