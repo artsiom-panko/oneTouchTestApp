@@ -1,7 +1,16 @@
 package com.panko.onetouchtestapp.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.panko.onetouchtestapp.api.GameApi;
+import com.panko.onetouchtestapp.services.GameService;
+import com.panko.onetouchtestapp.services.GameValidationService;
+import com.panko.onetouchtestapp.validation.ValidationError;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.net.URI;
+import java.util.Collection;
 
 @RestController
 public class GameController implements GameApi {
