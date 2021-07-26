@@ -17,12 +17,13 @@ public class GameController implements GameApi {
     @Override
     public ResponseEntity getGameUri(Integer operatorId, Integer gameId, String currency) {
         final Collection<ValidationError> errors = gameValidationService.validateGameApiRequest(operatorId, gameId, currency);
+        final URI gameUri = gameService.getGameUri(operatorId, gameId, currency);
 
         if (!errors.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(errors);
         }
 
-        return ResponseEntity.status(HttpStatus.OK).body(gameService.getGameUri(operatorId, gameId, currency));
+        return ResponseEntity.status(HttpStatus.OK).body(gameUri);
     }
 }
